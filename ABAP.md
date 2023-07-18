@@ -7,6 +7,7 @@
 - [ALV](#alv)
 - [File Handling](#file-handling)
 - [Object Oriented ABAP](#object-oriented-abap)
+- [Enhancements](#enhancements)
 - [Debugging](#debugging)
 
 
@@ -43,6 +44,15 @@ For that, we refer to [**Clean ABAP coding**](https://github.com/SAP/styleguides
 ## Object Oriented ABAP
 
 > [ABAP](#abap) > [Content](#content) > [This section](#object-oriented-abap)
+
+## Enhancements
+
+> [ABAP](#abap) > [Content](#content) > [This section](#enhancements)
+
+### Enhancements to Classes and Interfaces
+[**This link from SAP**](https://help.sap.com/saphelp_snc700_ehp01/helpdata/en/58/4fb541d3d52d31e10000000a155106/frameset.htm) explains the different kinds of enhancements that we have for classes and interfaces.
+
+[Pre-method / post-method enhancements](https://wiki.scn.sap.com/wiki/display/ABAP/Step+by+step+to+enhance+ABAP+code+via+post+exit)
 
 ## Debugging
 
