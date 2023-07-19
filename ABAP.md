@@ -52,6 +52,8 @@ For that, we refer to [**Clean ABAP coding**](https://github.com/SAP/styleguides
 ### Enhancements to Classes and Interfaces
 [**This link from SAP**](https://help.sap.com/saphelp_snc700_ehp01/helpdata/en/58/4fb541d3d52d31e10000000a155106/frameset.htm) explains the different kinds of enhancements that we have for classes and interfaces.
 
+What are [SAP user exits and enhancements](https://www.stechies.com/sap-user-exits-and-enhancements/) and how to find them.
+
 [Pre-method / post-method enhancements](https://wiki.scn.sap.com/wiki/display/ABAP/Step+by+step+to+enhance+ABAP+code+via+post+exit)
 
 ## Debugging
