@@ -5,6 +5,8 @@
 - [Clean ABAP](#clean-abap)
 - [Selection Screen](#selection-screen)
 - [ALV](#alv)
+- [Processing Internal Data](#processing-internal-data)
+  - [Timestamp](#timestamp)
 - [File Handling](#file-handling)
 - [Object Oriented ABAP](#object-oriented-abap)
 - [Enhancements](#enhancements)
@@ -36,6 +38,32 @@ For that, we refer to [**Clean ABAP coding**](https://github.com/SAP/styleguides
 ## ALV
 
 > [ABAP](#abap) > [Content](#content) > [This section](#alv)
+
+## Processing Internal Data
+
+> [ABAP](#abap) > [Content](#content) > [This section](#file-handling)
+
+### Timestamp
+SAP stores timestamps in UTC time (similar to GMT time).
+If you deal with programs that create timestamp entries in DB records, you will notice a difference between the timestamp entry and the system time. This is because the system time is converted to UTC when storing the timestamp.
+
+To generate a timestamp from system time:
+```ABAP
+DATA lv_timestamp TYPE timestamp.
+GET TIME STAMP FIELD lv_timestamp.
+
+" In-line declaration
+GET TIME STAMP FIELD DATA(lv_timestamp).
+```
+
+To convert a date and time entered by the user to a timestamp that can be used to compare and extract timestamp records from DB, we can use:
+```ABAP
+" Assume that you have 2 screen parameters P_DATE for date and P_TIME for time
+CONVERT DATE p_date
+        TIME p_time
+        INTO TIME STAMP lv_timestamp
+            TIME ZONE sy-zonlo.
+```
 
 ## File Handling
 
