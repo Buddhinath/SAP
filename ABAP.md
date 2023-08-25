@@ -65,6 +65,8 @@ CONVERT DATE p_date
             TIME ZONE sy-zonlo.
 ```
 
+Further code example on SAP documentation can be found [here](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenconvert_time_stamp_abexa.htm).
+
 ## File Handling
 
 > [ABAP](#abap) > [Content](#content) > [This section](#file-handling)
