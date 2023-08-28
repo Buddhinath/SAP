@@ -69,7 +69,8 @@ CONVERT DATE p_date
 
 To convert a UTC timestamp (probably when reading from DB) to date-time combination of user's time zone:
 ```ABAP
-" Assume the UTC timestamp is in field LV_TIMESTAMP and you want to store converted values in LV_DATE and LV_TIME. 
+" Assume the UTC timestamp is in field LV_TIMESTAMP and you want to store converted
+" values in LV_DATE and LV_TIME. 
 CONVERT TIME STAMP lv_timestamp TIME ZONE sy-zonlo 
         INTO DATE lv_date
              TIME lv_time. 
