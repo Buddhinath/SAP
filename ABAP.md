@@ -49,7 +49,7 @@ For that, we refer to [**Clean ABAP coding**](https://github.com/SAP/styleguides
 SAP stores timestamps in UTC time (similar to GMT time).
 If you deal with programs that create timestamp entries in DB records, you will notice a difference between the timestamp entry and the system time. This is because the system time is converted to UTC when storing the timestamp.
 
-To generate a timestamp from system time:
+To generate a UTC timestamp from system time:
 ```ABAP
 DATA lv_timestamp TYPE timestamp.
 GET TIME STAMP FIELD lv_timestamp.
@@ -67,7 +67,16 @@ CONVERT DATE p_date
             TIME ZONE sy-zonlo.
 ```
 
-Further code example on SAP documentation can be found [here](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenconvert_time_stamp_abexa.htm).
+To convert a UTC timestamp (probably when reading from DB) to date-time combination of user's time zone:
+```ABAP
+" Assume the UTC timestamp is in field LV_TIMESTAMP and you want to store converted values in LV_DATE and LV_TIME. 
+CONVERT TIME STAMP lv_timestamp TIME ZONE sy-zonlo 
+        INTO DATE lv_date
+             TIME lv_time. 
+```
+
+Conversion syntax details are found [here](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abapconvert_time-stamp.htm)
+Further code examples on SAP documentation can be found [here](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenconvert_time_stamp_abexa.htm).
 
 ## File Handling
 
